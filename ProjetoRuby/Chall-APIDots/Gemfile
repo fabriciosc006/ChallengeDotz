@@ -1,0 +1,7 @@
+source "https://rubygems.org"
+
+gem 'rspec', '3.10'
+gem 'httparty', '0.19.0'
+gem 'cucumber', '7.0'
+gem 'fastri', '0.3.1.1'
+gem 'rcodetools', '0.8.5.0'

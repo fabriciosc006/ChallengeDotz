@@ -1,0 +1,154 @@
+{
+	"id": "fc7979ee-7778-4fb4-8b9b-6f9ee097f771",
+	"name": "Open Weather Map",
+	"timestamp": "2021-09-12T23:14:12.198Z",
+	"collection_id": "13350557-32918f9d-3c81-4b9c-8dab-554552271023",
+	"folder_id": 0,
+	"environment_id": "84d2f712-bdf3-461e-a931-a5c4288b6961",
+	"totalPass": 6,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "5bdbdb2c-bac4-49b4-be76-ec24acc72428",
+			"name": "GET Orign City valid",
+			"url": "http://api.openweathermap.org/data/2.5/weather?id=3663517&appid=fb610d41cdaeed498989e189a77403f1",
+			"time": 571,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				571
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "a3cb0ec7-689d-44d2-8df7-9669db786d7a",
+			"name": "GET Orign City invalid",
+			"url": "http://api.openweathermap.org/data/2.5/weather?id=36635&appid=fb610d41cdaeed498989e189a77403f1",
+			"time": 248,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404 - City Not Found": true,
+				"Cidade nao encontrada no Banco": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404 - City Not Found": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Cidade nao encontrada no Banco": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				248
+			],
+			"allTests": [
+				{
+					"Status code is 404 - City Not Found": true,
+					"Cidade nao encontrada no Banco": true
+				}
+			]
+		},
+		{
+			"id": "d2066619-97ea-4f22-8428-d8b8e6ad48d5",
+			"name": "GET lat Long",
+			"url": "http://api.openweathermap.org/data/2.5/weather?lat=-3.1019&lon=-60.025&appid=fb610d41cdaeed498989e189a77403f1",
+			"time": 241,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				241
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "627fb7a0-7a51-46b7-8b8e-d09e26ba612f",
+			"name": "GET Orign City key invalid",
+			"url": "http://api.openweathermap.org/data/2.5/weather?id=3663517&appid=fb610d41cdaeed498989e189a774",
+			"time": 225,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code é 401": true,
+				"Key da Api nao é Válida": true
+			},
+			"testPassFailCounts": {
+				"Status code é 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Key da Api nao é Válida": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				225
+			],
+			"allTests": [
+				{
+					"Status code é 401": true,
+					"Key da Api nao é Válida": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1285,
+	"collection": {
+		"requests": [
+			{
+				"id": "5bdbdb2c-bac4-49b4-be76-ec24acc72428",
+				"method": "GET"
+			},
+			{
+				"id": "a3cb0ec7-689d-44d2-8df7-9669db786d7a",
+				"method": "GET"
+			},
+			{
+				"id": "d2066619-97ea-4f22-8428-d8b8e6ad48d5",
+				"method": "GET"
+			},
+			{
+				"id": "627fb7a0-7a51-46b7-8b8e-d09e26ba612f",
+				"method": "GET"
+			}
+		]
+	}
+}

@@ -1,0 +1,27 @@
+#language : pt
+
+Funcionalidade: Busca por produto
+
+Cenario: Busca por item na Home
+Dado que acesso a pagina da Dotz
+Quando busco por "jogo de cama"
+Entao o site retorna os resultados da busca
+
+Cenario: Busca por item em Branco
+Dado que acesso a pagina da Dotz
+Quando busco por item sem digitar
+Entao o site retorna para a pagina principal
+
+Funcionalidade: Navegacao no menu Categorias
+
+Cenario: Busca por categoria
+Dado que acesso a pagina da Dotz
+Quando busco pela categoria "Bar e Cozinha"
+Entao o site retorna os resultados da busca
+
+Cenario: Cancela a busca por Categoria
+Dado que acesso a pagina da Dotz
+Quando busco pela categoria "Bar e Cozinha" e cancelo a busca
+Entao o site retorna para a pagina de itens
+
+
